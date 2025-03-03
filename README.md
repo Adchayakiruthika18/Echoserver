@@ -22,7 +22,6 @@ Testing the server and client
 ## PROGRAM:
 ```
 Server :
-
 import socket
 HOST, PORT = '127.0.0.1', 65432
 with socket.create_server((HOST, PORT)) as s:
@@ -31,6 +30,7 @@ with socket.create_server((HOST, PORT)) as s:
         print(f'Connected by {addr}')
         while data := conn.recv(1024):
             conn.sendall(data)
+
 Client
 import socket
 HOST, PORT = '127.0.0.1', 65432
